@@ -36,6 +36,7 @@ public class TipoTrabajadorDAO {
         return retornar;
     }
     
+    
     public boolean ActualizarTipo(Tipo_Trabajador obTipo_Trabajador)throws SQLException{
         boolean retornar = false;
         try {
