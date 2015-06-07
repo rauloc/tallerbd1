@@ -30,7 +30,6 @@ public class TipoTrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-            System.out.println("ERROR - TIPOTRABAJADOR - DAO - REGISTRARTIPO" + e.getMessage());
             e.printStackTrace();
         }
         return retornar;
@@ -51,7 +50,6 @@ public class TipoTrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-            System.out.println("ERROR - TIPOTRABAJADOR - DAO - ACTUALIZARTIPO" + e.getMessage());
             e.printStackTrace();
         }
         return retornar;
@@ -68,7 +66,6 @@ public class TipoTrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-            System.out.println("ERROR - TIPOTRABAJADOR - DAO - ELIMINARTIPO" + e.getMessage());
             e.printStackTrace();
         }
         return retornar;
@@ -89,7 +86,6 @@ public class TipoTrabajadorDAO {
             pstm.close();
             con.close();
         } catch (Exception e) {
-            System.out.println("ERROR - TIPOTRABAJADOR - DAO - LISTARTIPO" + e.getMessage());
             e.printStackTrace();
         }
         return listartipo;

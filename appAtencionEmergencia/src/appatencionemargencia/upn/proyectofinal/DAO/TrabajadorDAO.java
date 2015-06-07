@@ -39,7 +39,6 @@ public class TrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-               System.out.println("ERROR - TRABAJADOR - DAO - REGISTRAR"+e.getMessage());
                e.printStackTrace();
         }
         return retornar;
@@ -66,7 +65,7 @@ public class TrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-            System.out.println("ERROR - TRABAJADOR - DAO - ACTUALIZAR"+e.getMessage());
+            e.printStackTrace();
         }
         return retornar;
     }
@@ -82,7 +81,7 @@ public class TrabajadorDAO {
             con.close();
             retornar = true;
         } catch (Exception e) {
-            System.out.println("ERROR - TRABAJADOR - DAO - ELIMINAR");
+            e.printStackTrace();
         }
         return retornar;
     }
@@ -113,7 +112,7 @@ public class TrabajadorDAO {
             pstm.close();
             con.close();
         } catch (Exception e) {
-            System.out.println("ERROR - TRABAJADOR - DAO - LISTAR");
+            e.printStackTrace();
         }
         return listadotrabajador;
     }
@@ -135,7 +134,6 @@ public class TrabajadorDAO {
             pstm.close();
             con.close();
         } catch (Exception e) {
-            System.out.println("ERROR - DAO - TRABAJADOR - VALIDALOGIN ");
             e.printStackTrace();
         }
         return objTrabajador;

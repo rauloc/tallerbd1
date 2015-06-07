@@ -137,7 +137,6 @@ public class Login extends javax.swing.JFrame {
             }
             
         } catch (Exception e) {
-            System.out.println("Error interno en el sistema de formulario login" + e.getMessage());
             e.printStackTrace();
         }
     }//GEN-LAST:event_jButton1ActionPerformed

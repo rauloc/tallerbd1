@@ -45,8 +45,7 @@ public class Administrador_Trabajador extends javax.swing.JInternalFrame {
             }
             cboTipo.setModel(model);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error de base de datos" + e.getMessage());
-            System.out.println("Error: Carga Tipo de Trabajador");
+            e.printStackTrace();
         }
     }
     
@@ -71,7 +70,7 @@ public class Administrador_Trabajador extends javax.swing.JInternalFrame {
             }
             tblListaTrabajadores.setModel(modelo1);
         } catch (Exception e) {
-            System.out.println("error --> interfaz --> trabajador --> listar");
+            e.printStackTrace();
         }
     }
     /**
@@ -315,7 +314,7 @@ public class Administrador_Trabajador extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "No se registro correctamente al Trabajador ");
             }
         } catch (Exception e) {
-            System.out.println("error --> interfaz --> trabajador --> Guardar");
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -359,7 +358,7 @@ public class Administrador_Trabajador extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "No lo pudimos actualizar por problemas internos ");
             }
         } catch (Exception e) {
-            System.out.println(" ERROR --> Interfaz --> Trabajadro --> Actualizar --> " + e.getMessage());
+            e.printStackTrace();
         }
     }//GEN-LAST:event_BtnActualizarActionPerformed
 
@@ -379,7 +378,7 @@ public class Administrador_Trabajador extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "No se Elimino correctamente");
             }
         } catch (Exception e) {
-             System.out.println(" ERROR --> INTERFAZ --> TRABAJADOR --> Eliminar --> " + e.getMessage());
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 

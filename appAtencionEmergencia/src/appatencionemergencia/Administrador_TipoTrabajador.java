@@ -243,7 +243,7 @@ public class Administrador_TipoTrabajador extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "No se Guardo correctamente");
             }
         } catch (Exception e) {
-             System.out.println(" ERROR --> INTERFAZ --> TIPO --> Guardar --> " + e.getMessage());
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
@@ -263,7 +263,7 @@ public class Administrador_TipoTrabajador extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "No se Elimino correctamente");
             }
         } catch (Exception e) {
-            System.out.println(" ERROR --> INTERFAZ --> TIPO --> Eliminar --> " + e.getMessage());
+            e.printStackTrace();
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 

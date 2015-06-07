@@ -25,10 +25,8 @@ public class Conexion {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             con = DriverManager.getConnection("jdbc:oracle:thin:@"+server+":"+port+":"+dbname,user,password);
-            System.out.println("conexion finalizada correctamente :) ");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println(" error --> Conexion --> getConnection  "+e.getMessage());
         }
         return con;
     }
