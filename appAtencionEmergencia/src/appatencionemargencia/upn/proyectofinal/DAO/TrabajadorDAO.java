@@ -117,4 +117,27 @@ public class TrabajadorDAO {
         }
         return listadotrabajador;
     }
+    
+    public Trabajador validaLogin(String user,String clave)throws SQLException{
+        Trabajador objTrabajador = new Trabajador();
+        try {
+            Connection con = Conexion.getConnection();
+            PreparedStatement pstm = con.prepareStatement("select t.ID,ti.descripcion from TIPO_TRABAJADOR ti inner join \n" +
+                        "TRABAJADOR t on (ti.ID = t.IDTIPOTRABAJADOR)\n" +
+                        "where t.USUARIO='"+user+"' and t.CLAVE='"+clave+"'");
+            ResultSet rst = pstm.executeQuery();
+            while (rst.next()) {                
+                objTrabajador.setId(rst.getInt("ID"));
+                Tipo_Trabajador tipo = new Tipo_Trabajador();
+                tipo.setDescripcion(rst.getString("descripcion"));
+                objTrabajador.setObjTipoTrabajador(tipo);
+            }
+            pstm.close();
+            con.close();
+        } catch (Exception e) {
+            System.out.println("ERROR - DAO - TRABAJADOR - VALIDALOGIN ");
+            e.printStackTrace();
+        }
+        return objTrabajador;
+    }
 }
